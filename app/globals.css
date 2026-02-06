@@ -1,0 +1,70 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #FFF8F5;
+  --surface: #FFFFFF;
+  --surface2: #FFF1EC;
+  --text: #2B1B17;
+  --muted: #6B4F4A;
+  --border: #F3D7CF;
+  --peach-500: #FF8A65;
+  --peach-400: #FFA07A;
+  --peach-200: #FFD0C2;
+  --pink-500: #FF5DA2;
+  --pink-200: #FFC2DD;
+  --gold-400: #FFC27A;
+  --gradient-primary: linear-gradient(135deg, #FF8A65 0%, #FF5DA2 55%, #FFC27A 100%);
+  --gradient-soft: linear-gradient(135deg, #FFF1EC 0%, #FFE3EC 60%, #FFF8F5 100%);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-inter), sans-serif;
+  min-height: 100vh;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-poppins), sans-serif;
+}
+
+.container {
+  max-width: 1180px;
+}
+
+.gradient-text {
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.card {
+  @apply rounded-3xl border border-border bg-surface shadow-card;
+}
+
+.button-primary {
+  background: var(--gradient-primary);
+  color: white;
+}
+
+.section-soft {
+  background: var(--gradient-soft);
+}
+
+.corner-blob {
+  position: absolute;
+  width: 240px;
+  height: 240px;
+  background: var(--gradient-primary);
+  opacity: 0.06;
+  border-radius: 9999px;
+  filter: blur(1px);
+  pointer-events: none;
+}
